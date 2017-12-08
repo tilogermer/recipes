@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
       <th>Image</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +16,9 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.title %></td>
+        <td><%= image_tag recipe.image , class: "recipe-show-mini" if recipe.image? %></td>
         <td><%= recipe.description %></td>
-        <td><%= recipe.image %></td>
+        
         <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
