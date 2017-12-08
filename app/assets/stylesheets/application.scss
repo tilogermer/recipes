@@ -2,10 +2,31 @@
 @import "bootstrap";
 
 img.recipe-show{
-	width: 400px;
+	width: 500px;
 	height: auto;
 }
 img.recipe-show-mini{
 	width: 50px;
 	height: auto;
+}
+img.recipe-index{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.recipe-box{
+	box-shadow: 10px 10px 5px #888888;
+	height: 400px;
+	position: relative;
+	background-color: #bdc3c7;
+	
+}
+.recipe-box ul{
+	list-style-type: none;
+	position: absolute;
+	bottom: 0;
+}
+.recipe-box li:first-child {
+	font-size: 24px;
 }
